@@ -1,8 +1,10 @@
 # FitnessApp
 
+
+
 FitnessApp is a website created to easily track macronutrients and workout plans. 
 
-## Built With
+## Description
 
 Input your current daily macros and use the foods provided to create a nutrition plan that fits your macronutrient goals. Adding a serving automatically calculates the macros and subtracts them from your allowment for the day. In the workout porition, search for excercises to supplement your nutritional plan
 
