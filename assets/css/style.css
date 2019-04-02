@@ -1,0 +1,353 @@
+#user-inputs {
+    margin: 0 50px;
+}
+
+.submit {
+    margin-left: 50px;
+}
+
+#accent-strip {
+    background-color: rgb(224, 75, 30);
+    padding: 10px;
+}
+
+#head {
+    opacity: 0.90;
+}
+
+#heading {
+    font-size: 60px;
+}
+
+hr {
+    margin: 0 50px 25px;
+}
+
+body {
+    font-family: "Raleway", "sans-serif";
+}
+
+.logo {
+    color: white;
+}
+
+i {
+    color: rgb(224, 75, 30);
+}
+
+.input-div {
+    margin-bottom: 5px;
+}
+
+#line {
+    margin: 20px 50px 25px;
+}
+
+#male {
+    background-color: rgb(190, 64, 25);
+    color: white;
+}
+
+#female {
+    background-color: rgb(255, 124, 47);
+    color: white;
+}
+
+#submit-btn {
+    background-color: rgb(224, 75, 30);
+    color: white;
+}
+
+.btn:hover {
+    opacity: 0.65;
+}
+
+.slides {
+    position: relative;
+    margin: 0 auto .5em auto;
+}
+
+.slide {
+    position: relative;
+    margin: 0 auto .5em auto;
+}
+
+.mySlides, .mySides {
+    min-width: 508px;
+    max-width: 508px;
+    min-height: 350px;
+}
+
+#results-div {
+    display: none; 
+}
+
+/*testimonials section css*/
+
+#testimonials {
+    background-color: rgb(224, 75, 30);
+    border-radius: 5px;
+}
+
+.testimony {
+    background-color: white;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 15px 5px 0;
+}
+
+/* Clear floats after containers */
+
+.testimony::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Float images inside the container to the left. Add a right margin, and style the image as a circle */
+
+.testimony img {
+    float: left;
+    margin-right: 20px;
+    border-radius: 50%;
+}
+
+/* Increase the font-size of a span element */
+
+.testimony span {
+    font-size: 20px;
+    margin-right: 15px;
+}
+
+/* Add media queries for responsiveness. This will center both the text and the image inside the container */
+
+@media (max-width: 500px) {
+    .testimony {
+        text-align: center;
+    }
+    .testimony img {
+        margin: auto;
+        float: none;
+        display: block;
+    }
+}
+
+.homer {
+    font-family: 'Gaegu', cursive;
+}
+
+.spongeBob {
+    font-family: 'Gaegu', cursive;
+}
+
+.sign {
+    font-family: 'Combo', cursive;
+    font-size: 12px;
+}
+
+.simba {
+    font-family: 'Gaegu', cursive;
+}
+
+.ranger {
+    font-family: 'Gaegu', cursive;
+}
+
+.btn-danger {
+    position: absolute;
+    bottom: 0px;
+    right: 20px;
+}
+
+.recipe-portion {
+    margin: 10px 50px 10px 50px;
+    display: none;
+    border: 5px solid lightcoral; 
+    border-radius: 15px; 
+}
+
+.recipe-btn {
+    background-color: rgb(224, 75, 30);
+    color: white;
+    padding: 5px;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+/* .recipe-btn:hover {
+    background-color: mediumturquoise;
+} */
+
+.diet-labels {
+    border-radius: 10px;
+    background-color: lightgrey;
+    padding: 20px;
+    border: 2px solid black;
+}
+
+.health-concerns {
+    background-color: lightsteelblue; 
+    border-radius: 15px; 
+    padding: 40px 0px 0px 20px; 
+    border: 2px solid black; 
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    margin-left: 20px; 
+}
+
+.generated-recipe {
+    background-color: lightsteelblue; 
+    border-radius: 15px; 
+    padding: 20px;
+    border: 2px solid black; 
+    min-height: 200px;
+    overflow: auto; 
+    margin: 10px 50px 100px 50px;
+    display: none; 
+
+}
+
+.col-lg-9 {
+    padding: 0; 
+}
+
+.recipe-labels {
+    width: 100%; 
+}
+
+.typeDietText {
+    padding: 10px; 
+    margin-left: 10px; 
+}
+
+.img-link {
+    font-size: 24px; 
+    margin-left: 30px; 
+
+}
+
+
+
+@import url("https://fonts.googleapis.com/css?family=Inconsolata:400,700");
+
+.content {
+    padding-top: 40px;
+    border: 2px solid black; 
+    background-color: lightsteelblue; 
+    border-radius: 15px; 
+}
+
+.button_container {
+    width: auto; 
+    margin: 0 auto;
+}
+
+.button_container1 {
+    width: auto; 
+    margin: 0 auto;
+}
+
+.button_su {
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    border-radius: 3px;
+    margin-bottom: 30px;
+    border-radius: 15px; 
+}
+
+.su_button_circle {
+    background-color: red;
+    border-radius: 1000px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0px;
+    height: 0px;
+    margin-left: 0px;
+    margin-top: 0px;
+    pointer-events: none;
+    /*animation-timing-function: ease-in-out; */
+}
+
+.button_su_inner {
+    display: inline-block;
+    background: rgb(224, 75, 30);
+    color: #F4F4F4;
+    font-size: 16px;
+    font-weight: normal;
+    width: 100%; 
+    text-align: center;
+    border-radius: 3px;
+    transition: 400ms;
+    text-decoration: none;
+    padding: 22px;
+    z-index: 100000;
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+.button_su_inner1 {
+    display: inline-block;
+    background: rgb(224, 75, 30);
+    color: #F4F4F4;
+    font-size: 16px;
+    font-weight: normal;
+    width: 100%; 
+    text-align: center;
+    border-radius: 3px;
+    transition: 400ms;
+    text-decoration: none;
+    padding: 22px;
+    z-index: 100000;
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+.button_text_container {
+    position: relative;
+    z-index: 10000;
+}
+
+.explode-circle {
+    animation: explode 0.5s forwards;
+}
+
+.desplode-circle {
+    animation: desplode 0.5s forwards;
+}
+
+@keyframes explode {
+    0% {
+        width: 0px;
+        height: 0px;
+        margin-left: 0px;
+        margin-top: 0px;
+        background-color: rgba(42, 53, 80, 0.2);
+    }
+    100% {
+        width: 400px;
+        height: 400px;
+        margin-left: -200px;
+        margin-top: -200px;
+        background-color: mediumturquoise;
+    }
+}
+
+@keyframes desplode {
+    0% {
+        width: 400px;
+        height: 400px;
+        margin-left: -200px;
+        margin-top: -200px;
+        background-color: mediumturquoise;
+    }
+    100% {
+        width: 0px;
+        height: 0px;
+        margin-left: 0px;
+        margin-top: 0px;
+        background-color: rgba(129, 80, 108, 0.6);
+    }
+}

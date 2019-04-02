@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EasyFit</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">    
+    <link href="https://fonts.googleapis.com/css?family=Gaegu" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+
+<body>
+
+    
+    
+        <div class="row">
+            <div class="col-lg-12" id="accent-strip"></div>
+         </div>
+            
+        <div class="row" id="head">
+            <div class="col-lg-12 text-center header">
+                <h1 class="display-2" id="heading">EasyFit<i class="fas fa-bicycle"></i> </h1>
+            </div>
+        </div>
+
+        <button type="button" class="btn btn-info" onclick = "showNutrition()">Nutrition</button>
+        <button type="button" class="btn btn-info" onclick = "showWorkout(); workout();">Workout</button>
+
+    <div class="container-fluid" id = "nutritionPage">
+        <div class="row">
+            <div class="col-lg-4">
+                <form>
+                    <h2>Enter Your Macros</h2>
+                    <div class="input-group mb-2">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">Fat&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</div>
+                        </div>
+                        <input type="text" class="form-control" id="fatInput" aria-describedby="emailHelp" placeholder="Enter Fat in grams">
+                    </div>
+
+                    <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">Carbs&nbsp&nbsp</div>
+                            </div>
+                            <input type="text" class="form-control" id="carbsInput" aria-describedby="emailHelp" placeholder="Enter Carbs in grams">
+                        </div>
+
+                    <div class="input-group mb-2">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">Protein</div>
+                        </div>
+                        <input type="text" class="form-control" id="proteinInput" aria-describedby="emailHelp" placeholder="Enter Protein in grams">
+                    </div>
+
+
+
+                </form>
+                <button onclick="macroSubmit();" class="btn btn-primary">Submit</button>
+            </div>
+
+            <div class="col-lg-6">
+                
+                <div id = "macros" style="display: none">
+                        <h2>Daily Totals</h2>
+                        <div id = "calories"></div>
+                        <div id = "fat"></div> 
+                        <div id = "carbs"></div>
+                        <div id = "protein"></div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <hr> 
+
+        <div class="row" id = "dietContainer">
+ 
+        </div>
+
+
+    <div id = "foodOutput" style = "display: none">
+        <br>
+        <hr> 
+        <div class="row">
+              
+            <div class="col-lg-4">
+                
+                    <div class="form-group">
+                    <label for="foodInput">Food Input</label>
+                    <input type="food" class="form-control" id="foodInput" aria-describedby="emailHelp" placeholder="Search">
+                    <small id="emailHelp" class="form-text text-muted">Search for Food</small>
+                    <button onclick="myFunction(); searchWorkout();" class="btn btn-primary">Submit</button>
+                    </div>  
+            </div>
+
+            <div class="col-lg-8">
+                <div class="tab-content" id="myContent">
+                    <div class="tab-pane active" id="response0" role="tabpanel"></div>
+                    <div class="tab-pane" id="response1" role="tabpanel"></div>
+                    <div class="tab-pane" id="response2" role="tabpanel"></div>
+                    <div class="tab-pane" id="response3" role="tabpanel"></div>
+                    <div class="tab-pane" id="response4" role="tabpanel"></div>
+                    <div class="tab-pane" id="response5" role="tabpanel"></div>
+                    <div class="tab-pane" id="response6" role="tabpanel"></div>
+                    <div class="tab-pane" id="response7" role="tabpanel"></div>
+                    <div class="tab-pane" id="response8" role="tabpanel"></div>
+                    <div class="tab-pane" id="response9" role="tabpanel"></div>
+                </div>
+
+                <div class="input-group mb-3" id="servingContainer" style="display: none">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="basic-addon1"># of servings</span>
+                        </div>
+                    <input type="text" class="col-xs-1" id = "servingSize" placeholder="" aria-label="Username" aria-describedby="basic-addon1">
+                </div>
+            </div>
+
+ 
+
+        </div>
+            <div class="list-group" id="myList" role="tablist">
+                <a class="list-group-item list-group-item-action" data-toggle="list" href="#response0" id = "name0" role="tab" style = "display: none"></a>
+                <a class="list-group-item list-group-item-action" data-toggle="list" href="#response1" id = "name1" role="tab" style = "display: none"></a>
+                <a class="list-group-item list-group-item-action" data-toggle="list" href="#response2" id = "name2" role="tab" style = "display: none"></a>
+                <a class="list-group-item list-group-item-action" data-toggle="list" href="#response3" id = "name3" role="tab" style = "display: none"></a>
+                <a class="list-group-item list-group-item-action" data-toggle="list" href="#response4" id = "name4" role="tab" style = "display: none"></a>
+                <a class="list-group-item list-group-item-action" data-toggle="list" href="#response5" id = "name5" role="tab" style = "display: none"></a>
+                <a class="list-group-item list-group-item-action" data-toggle="list" href="#response6" id = "name6" role="tab" style = "display: none"></a>
+                <a class="list-group-item list-group-item-action" data-toggle="list" href="#response7" id = "name7" role="tab" style = "display: none"></a>
+                <a class="list-group-item list-group-item-action" data-toggle="list" href="#response8" id = "name8" role="tab" style = "display: none"></a>
+                <a class="list-group-item list-group-item-action" data-toggle="list" href="#response9" id = "name9" role="tab" style = "display: none"></a>
+            </div>
+        
+        <!-- Tab panes -->
+
+        </div>
+    
+    </div>
+
+    <div class="container-fluid" id = "workoutPage" style = "display: none">
+        <div class="form-group">
+            <label for="workoutInput">Exercise Search</label>
+            <input type="workout" class="form-control" id="workoutInput" aria-describedby="workout" placeholder="Search">
+            <small id="emailHelp" class="form-text text-muted">Search for Exercise</small>
+            <button onclick="searchWorkout();" class="btn btn-primary">Submit</button>
+        </div>
+        
+        <div class="row" id = "personalWorkoutContainer">
+ 
+        </div>
+
+        <hr>
+        
+        <div class="col-lg-8">
+            <div class="tab-content" id="workoutContent">
+                <div class="tab-pane active" id="workout0" role="tabpanel"></div>
+                <div class="tab-pane" id="workout1" role="tabpanel"></div>
+                <div class="tab-pane" id="workout2" role="tabpanel"></div>
+                <div class="tab-pane" id="workout3" role="tabpanel"></div>
+                <div class="tab-pane" id="workout4" role="tabpanel"></div>
+                <div class="tab-pane" id="workout5" role="tabpanel"></div>
+                <div class="tab-pane" id="workout6" role="tabpanel"></div>
+                <div class="tab-pane" id="workout7" role="tabpanel"></div>
+                <div class="tab-pane" id="workout8" role="tabpanel"></div>
+                <div class="tab-pane" id="workout9" role="tabpanel"></div>
+                <div class="tab-pane" id="workout10" role="tabpanel"></div>
+                <div class="tab-pane" id="workout11" role="tabpanel"></div>
+                <div class="tab-pane" id="workout12" role="tabpanel"></div>
+                <div class="tab-pane" id="workout13" role="tabpanel"></div>
+                <div class="tab-pane" id="workout14" role="tabpanel"></div>
+                <div class="tab-pane" id="workout15" role="tabpanel"></div>
+                <div class="tab-pane" id="workout16" role="tabpanel"></div>
+                <div class="tab-pane" id="workout17" role="tabpanel"></div>
+                <div class="tab-pane" id="workout18" role="tabpanel"></div>
+                <div class="tab-pane" id="workout19" role="tabpanel"></div>
+                <div class="tab-pane" id="workout20" role="tabpanel"></div>
+            </div> 
+            
+            <div class="input-group mb-3" id="workoutInputContainer" style="display: none">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1">Sets</span>
+                </div>
+            <input type="text" class="col-xs-1" id = "setInput" placeholder="" aria-label="Username" aria-describedby="basic-addon1">
+        </div>
+
+
+        </div>
+
+        <div class="col-lg-4">
+            
+        </div>
+
+        <div class="list-group" id="workoutList" role="tablist">
+            <a class="list-group-item list-group-item-action" data-toggle="list" href="#workout0" id = "wr0" role="tab" style = "display: none"></a>
+            <a class="list-group-item list-group-item-action" data-toggle="list" href="#workout1" id = "wr1" role="tab" style = "display: none"></a>
+            <a class="list-group-item list-group-item-action" data-toggle="list" href="#workout2" id = "wr2" role="tab" style = "display: none"></a>
+            <a class="list-group-item list-group-item-action" data-toggle="list" href="#workout3" id = "wr3" role="tab" style = "display: none"></a>
+            <a class="list-group-item list-group-item-action" data-toggle="list" href="#workout4" id = "wr4" role="tab" style = "display: none"></a>
+            <a class="list-group-item list-group-item-action" data-toggle="list" href="#workout5" id = "wr5" role="tab" style = "display: none"></a>
+            <a class="list-group-item list-group-item-action" data-toggle="list" href="#workout6" id = "wr6" role="tab" style = "display: none"></a>
+            <a class="list-group-item list-group-item-action" data-toggle="list" href="#workout7" id = "wr7" role="tab" style = "display: none"></a>
+            <a class="list-group-item list-group-item-action" data-toggle="list" href="#workout8" id = "wr8" role="tab" style = "display: none"></a>
+            <a class="list-group-item list-group-item-action" data-toggle="list" href="#workout9" id = "wr9" role="tab" style = "display: none"></a>
+            <a class="list-group-item list-group-item-action" data-toggle="list" href="#workout10" id = "wr10" role="tab" style = "display: none"></a>
+            <a class="list-group-item list-group-item-action" data-toggle="list" href="#workout11" id = "wr11" role="tab" style = "display: none"></a>
+            <a class="list-group-item list-group-item-action" data-toggle="list" href="#workout12" id = "wr12" role="tab" style = "display: none"></a>
+            <a class="list-group-item list-group-item-action" data-toggle="list" href="#workout13" id = "wr13" role="tab" style = "display: none"></a>
+            <a class="list-group-item list-group-item-action" data-toggle="list" href="#workout14" id = "wr14" role="tab" style = "display: none"></a>
+            <a class="list-group-item list-group-item-action" data-toggle="list" href="#workout15" id = "wr15" role="tab" style = "display: none"></a>
+            <a class="list-group-item list-group-item-action" data-toggle="list" href="#workout16" id = "wr16" role="tab" style = "display: none"></a>
+            <a class="list-group-item list-group-item-action" data-toggle="list" href="#workout17" id = "wr17" role="tab" style = "display: none"></a>
+            <a class="list-group-item list-group-item-action" data-toggle="list" href="#workout18" id = "wr18" role="tab" style = "display: none"></a>
+            <a class="list-group-item list-group-item-action" data-toggle="list" href="#workout19" id = "wr19" role="tab" style = "display: none"></a>
+            <a class="list-group-item list-group-item-action" data-toggle="list" href="#workout20" id = "wr20" role="tab" style = "display: none"></a>
+        </div>
+
+
+    </div>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="assets/javascript/tdee.js"></script>
+<script type="text/javascript" src="assets/javascript/workout.js"></script>
+<script type="text/javascript" src="assets/javascript/nutrition.js"></script>
+</body>
+
+</html>

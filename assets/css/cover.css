@@ -1,0 +1,111 @@
+body {
+    font-family: Arial;
+    color: white;
+    padding-top: 1em;
+    min-height: 9em;
+    font-size: 2em;
+    font-family: 'Open Sans', sans-serif;
+    font-weight:300;
+}
+
+
+.split {
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.left {
+    left: 0;
+    background-image: url("http://greatoceanroadrunfest.com.au/wp-content/uploads/2018/05/playdate.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    height: 100%; 
+    color: white;
+    
+    
+   
+   
+}
+
+.right {
+    right: 0;
+    background-image: url("https://vermontbiz.com/files/resize/under_armour_mountain_running_series_killington_s-770x513.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    height: 100%;  
+    color: black;
+}
+
+
+
+.buttons{
+    font-family: 'Open Sans', sans-serif;
+    font-weight:800;
+    background: none;
+    border: 1px solid black;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    width: 10em;
+    padding: 0.7em;
+    font-size: 0.5em;
+    -moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    -webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+}
+
+.button{
+  font-family: 'Open Sans', sans-serif;
+  font-weight:800;
+  background: none;
+  border: 1px solid white;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  width: 10em;
+  padding: 0.7em;
+  font-size: 0.5em;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+  
+}
+.split-pane button:hover, .split-pane .button:hover {
+  text-decoration: none;
+  background-color: white;
+  border-color: white;
+  cursor: pointer;
+}
+.split-pane button:hover, .split-pane .button:hover {
+  color: orange;
+}
+.split-pane button:hover, .split-pane .buttons:hover {
+    text-decoration: none;
+    background-color: black;
+    border-color: black;
+    cursor: pointer;
+  }
+.split-pane button:hover, .split-pane .buttons:hover {
+    color: orange;
+  }
+
+.big {
+	font-weight:700;
+}
